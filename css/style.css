@@ -1,0 +1,132 @@
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0,0%,0%);
+    
+    --gray_100: hsl(0, 0%, 80%);
+    --gray_200: hsl(0, 0%, 62%);
+    --gray_700: hsl(0, 0%, 20%);
+    --gray_800: hsl(0, 0%, 12%);
+    --gray_900: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    color: var(--white);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Main section style */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#user_avatar {
+    border-radius: 100px;
+    width: 20%;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+#location {
+    color: var(--green);
+}
+#bio {
+    margin: 20px 0 10px 0;
+}
+
+li {
+    background-color: var(--gray_700);
+    margin: 10px 10px;
+    text-align: center;
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li:hover {
+    background-color: var(--green);
+}
+
+footer {
+    margin: 10px 10px 0;
+    text-align: center;
+}
+
+/* Toggler Style */
+
+.toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 8rem;
+    height: 2rem;
+    border: var(--green) 4px solid;
+    border-radius: 999px;
+    font-weight: 700;
+    color: var(--green);
+    cursor: pointer;
+}
+
+/* Light Theme Style */
+
+body {
+    background-color: var(--gray_100);
+}
+
+.toggler {
+    background-color: var(--gray_700);
+}
+.card {
+    background-color: var(--gray_200);
+}
+
+/* Dark Theme Style */
+
+.dark {
+    background-color: var(--gray_900);
+}
+
+.dark .toggler {
+    background-color: transparent;
+}
+.dark .card {
+    background-color: var(--gray_800);
+}
